@@ -1,4 +1,27 @@
 call pathogen#infect()
+set autoindent
+set autoread
+set backspace=indent,eol,start
+set encoding=utf-8
+set expandtab
+set fileformats=unix,dos,mac
+set laststatus=2
+set linebreak
+set list
+set listchars=tab:>-,eol:¶
+set number
+set shiftwidth=4
+set showbreak=
+set showmatch
+set softtabstop=4
+set suffixes+=.pyc,.o,.so
+set tabstop=4
+set wildmenu
+
+
+" http://stackoverflow.com/questions/1005/getting-root-permissions-on-a-file-inside-of-vi
+cmap w!! w !sudo tee >/dev/null %
+
 
 " colorscheme
 if has('gui_running')
@@ -30,11 +53,9 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
-
-"set nocompatible
+"powerline
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
 
 " NERD_tree.vim
 let NERDTreeIgnore = ['\~$', '\.pyc$']
@@ -86,4 +107,5 @@ function! SyntaxCheckers_javascript_GetLocList()
   let errorformat = '%f: line %l\, col %c\, %m,%-G%.%#'
   return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
 endfunction
+
 
