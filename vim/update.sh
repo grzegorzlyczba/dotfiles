@@ -1,0 +1,44 @@
+#!/bin/bash
+set -e
+
+PURGE=0
+
+cd `dirname $0`
+if [ ! -d autoload ]; then
+	mkdir autoload
+fi
+
+if [ ! -d bundle ]; then
+	mkdir bundle
+fi
+
+curl -Sso autoload/pathogen.vim \
+    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+
+modules=(
+	https://github.com/docunext/closetag.vim.git
+	https://github.com/scrooloose/nerdtree.git
+	https://github.com/scrooloose/syntastic.git
+	https://github.com/Lokaltog/vim-powerline.git
+	https://github.com/docunext/closetag.vim.git
+	https://github.com/hced/bufkill-vim.git
+	https://github.com/kien/ctrlp.vim.git
+	https://github.com/majutsushi/tagbar.git
+	https://github.com/tpope/vim-fugitive.git
+	https://github.com/vim-scripts/hgrev.git
+)
+
+for module in ${modules[@]}; do
+	dirname=$(basename $module | cut -d '.' -f 1)
+	if [ $PURGE -ne 0 ]; then
+		rm -rf bundle/${dirname}
+	fi 
+
+	if [ -d bundle/${dirname} ]; then
+		cd bundle/${dirname}
+		git pull
+		cd  -
+	else
+		git clone $module bundle/${dirname}
+	fi
+done
