@@ -20,7 +20,6 @@ modules=(
 	https://github.com/scrooloose/nerdtree.git
 	https://github.com/scrooloose/syntastic.git
 	https://github.com/Lokaltog/vim-powerline.git
-	https://github.com/docunext/closetag.vim.git
 	https://github.com/hced/bufkill-vim.git
 	https://github.com/kien/ctrlp.vim.git
 	https://github.com/majutsushi/tagbar.git

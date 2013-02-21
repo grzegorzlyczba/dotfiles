@@ -7,8 +7,8 @@ set expandtab
 set fileformats=unix,dos,mac
 set laststatus=2
 set linebreak
-set list
-set listchars=tab:>-,eol:¶
+"set list
+"set listchars=tab:>-,eol:¶
 set number
 set shiftwidth=4
 set showbreak=
