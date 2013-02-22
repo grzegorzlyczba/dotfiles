@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+echo "Update Vim modules"
 PURGE=0
 
 cd `dirname $0`
@@ -29,6 +30,7 @@ modules=(
 
 for module in ${modules[@]}; do
 	dirname=$(basename $module | cut -d '.' -f 1)
+    echo ${dirname}
 	if [ $PURGE -ne 0 ]; then
 		rm -rf bundle/${dirname}
 	fi 
@@ -36,7 +38,7 @@ for module in ${modules[@]}; do
 	if [ -d bundle/${dirname} ]; then
 		cd bundle/${dirname}
 		git pull
-		cd  -
+		cd  - >/dev/null
 	else
 		git clone $module bundle/${dirname}
 	fi
