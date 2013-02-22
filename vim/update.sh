@@ -6,26 +6,28 @@ PURGE=0
 
 cd `dirname $0`
 if [ ! -d autoload ]; then
-	mkdir autoload
+    mkdir autoload
 fi
 
 if [ ! -d bundle ]; then
-	mkdir bundle
+    mkdir bundle
 fi
 
 curl -Sso autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 modules=(
-	https://github.com/docunext/closetag.vim.git
-	https://github.com/scrooloose/nerdtree.git
-	https://github.com/scrooloose/syntastic.git
-	https://github.com/Lokaltog/vim-powerline.git
-	https://github.com/hced/bufkill-vim.git
-	https://github.com/kien/ctrlp.vim.git
-	https://github.com/majutsushi/tagbar.git
-	https://github.com/tpope/vim-fugitive.git
-	https://github.com/vim-scripts/hgrev.git
+    https://github.com/docunext/closetag.vim.git
+    https://github.com/scrooloose/nerdtree.git
+    https://github.com/scrooloose/syntastic.git
+    https://github.com/Lokaltog/vim-powerline.git
+    https://github.com/hced/bufkill-vim.git
+    https://github.com/kien/ctrlp.vim.git
+    https://github.com/majutsushi/tagbar.git
+    https://github.com/tpope/vim-fugitive.git
+    https://github.com/vim-scripts/hgrev.git
+    https://github.com/Lokaltog/vim-distinguished.git
+    https://github.com/altercation/vim-colors-solarized.git
 )
 
 for module in ${modules[@]}; do

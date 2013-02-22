@@ -29,6 +29,9 @@ if has('gui_running')
 else
     set background=dark
 endif
+colorscheme solarized
+let g:solarized_termcolors=256
+
 nmap \e :NERDTreeToggle<CR>
 nmap \t :TagbarToggle<CR>
 map <C-n> :bnext<CR>
