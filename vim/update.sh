@@ -28,6 +28,7 @@ modules=(
     https://github.com/vim-scripts/hgrev.git
     https://github.com/Lokaltog/vim-distinguished.git
     https://github.com/altercation/vim-colors-solarized.git
+    https://github.com/msanders/snipmate.vim.git
 )
 
 for module in ${modules[@]}; do
