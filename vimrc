@@ -34,6 +34,7 @@ let g:solarized_termcolors=256
 
 nmap \e :NERDTreeToggle<CR>
 nmap \t :TagbarToggle<CR>
+nmap \g :GitGutterToggle<CR>
 map <C-n> :bnext<CR>
 map <C-p> :bprev<CR>
 
