@@ -1,0 +1,30 @@
+{
+    "globals": {
+        "jasmine": true,
+        "spyOn": true,
+        "it": true,
+        "console": true,
+        "describe": true,
+        "expect": true,
+        "beforeEach": true,
+        "waits": true,
+        "waitsFor": true,
+        "runs": true
+    },
+    "node":true,
+    "maxerr":10000,
+    "maxlen":120,
+    "indent":4,
+    "trailing":true,
+    "es5":true,
+    "nomen":false,
+    "unused":true,
+    "eqnull":true,
+    "strict":false,
+    "forin":true,
+    "curly":true,
+    "camelcase":true,
+    "immed":true,
+    "undef":true,
+    "eqeqeq":false
+}
