@@ -31,6 +31,8 @@ modules=(
     https://github.com/msanders/snipmate.vim.git
     https://github.com/airblade/vim-gitgutter.git
     https://github.com/jnwhiteh/vim-golang.git
+    https://github.com/Lokaltog/vim-distinguished
+    https://github.com/bronson/vim-trailing-whitespace.git
 )
 
 for module in ${modules[@]}; do
