@@ -1,0 +1,15 @@
+[ui]
+merge = vimdiff
+username = Grzegorz Lyczba <glyczba@grupaonet.pl>
+
+[merge-tools]
+vimdiff.executable = vim
+vimdiff.args = -d $base $local $output $other +close +close
+
+[pager]
+pager = LESS='FRX' less
+
+[extensions]
+pager =
+color =
+purge =
