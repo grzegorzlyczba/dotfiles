@@ -44,6 +44,7 @@ nmap \t :TagbarToggle<CR>
 nmap \g :GitGutterToggle<CR>
 map <C-n> :bnext<CR>
 map <C-p> :bprev<CR>
+nmap <C-c> :nohlsearch<CR>
 
 "close current buffer
 map \c :BW<CR>
@@ -80,6 +81,14 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_switch_buffer = 0
 nmap ; :CtrlPBuffer<CR>
+
+" reload buffer
+fun! RefreshBuffer()
+    set noconfirm
+    bufdo e!
+    set confirm
+endfun
+nmap <C-r> :call RefreshBuffer()<CR>
 
 
 "============================================================================
