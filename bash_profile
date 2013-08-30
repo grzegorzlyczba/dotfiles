@@ -4,4 +4,7 @@ fi
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 export GOROOT=/usr/local/go
 export PATH=~/tools/bin:~/tools/node_modules/.bin:$GOROOT/bin:$PATH
-
+SSH_COMPLETE=( $(cat ~/.ssh/known_hosts | \
+    cut -f 1 -d " " | \sed -e s/,.*//g | \
+    uniq ) )
+complete -o default -W "${SSH_COMPLETE[*]}" ssh
