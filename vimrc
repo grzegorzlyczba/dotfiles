@@ -29,7 +29,7 @@ if has('gui_running')
 else
     set background=dark
 endif
-colorscheme solarized
+"colorscheme solarized
 let g:solarized_termcolors=256
 "set t_Co=256
 "set t_AB=^[[48;5;%dm
@@ -58,7 +58,6 @@ set ignorecase
 set incsearch
 set hlsearch
 set smartcase
-:nmap \q :nohlsearch<CR>
 
 "syntastic
 let g:syntastic_enable_signs=1
@@ -88,7 +87,7 @@ fun! RefreshBuffer()
     bufdo e!
     set confirm
 endfun
-nmap <C-r> :call RefreshBuffer()<CR>
+nmap <C-k> :call RefreshBuffer()<CR>
 
 
 "============================================================================
@@ -103,29 +102,29 @@ nmap <C-r> :call RefreshBuffer()<CR>
 "
 " This is for use with jslint and node, F/ is deprecating in favor of closure
 "============================================================================
-if exists('loaded_javascript_syntax_checker')
-  finish
-endif
-let loaded_javascript_syntax_checker = 1
-
-if !executable('jshint')
-  finish
-endif
-
-" Check for a .jshintrc in the cwd at startup, let that override any other configurations.
-" if filereadable(getcwd() . '/.jshintrc')
-  " let s:config = getcwd() . '/.jshintrc'
-" endif
-
-function! SyntaxCheckers_javascript_GetLocList()
-
-  if exists('s:config')
-    let makeprg = 'jshint ' . shellescape(expand("%")) . ' --config ' . s:config
-  else
-    let makeprg = 'jshint ' . shellescape(expand("%"))
-  endif
-  let errorformat = '%f: line %l\, col %c\, %m,%-G%.%#'
-  return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
-endfunction
+"if exists('loaded_javascript_syntax_checker')
+"  finish
+"endif
+"let loaded_javascript_syntax_checker = 1
+"
+"if !executable('jshint')
+"  finish
+"endif
+"
+"" Check for a .jshintrc in the cwd at startup, let that override any other configurations.
+"" if filereadable(getcwd() . '/.jshintrc')
+"  " let s:config = getcwd() . '/.jshintrc'
+"" endif
+"
+"function! SyntaxCheckers_javascript_GetLocList()
+"
+"  if exists('s:config')
+"    let makeprg = 'jshint ' . shellescape(expand("%")) . ' --config ' . s:config
+"  else
+"    let makeprg = 'jshint ' . shellescape(expand("%"))
+"  endif
+"  let errorformat = '%f: line %l\, col %c\, %m,%-G%.%#'
+"  return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
+"endfunction
 
 
