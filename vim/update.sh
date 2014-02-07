@@ -21,7 +21,6 @@ modules=(
     https://github.com/scrooloose/nerdtree.git
     https://github.com/scrooloose/syntastic.git
     https://github.com/Lokaltog/vim-powerline.git
-    https://github.com/hced/bufkill-vim.git
     https://github.com/kien/ctrlp.vim.git
     https://github.com/majutsushi/tagbar.git
     https://github.com/tpope/vim-fugitive.git
@@ -33,6 +32,8 @@ modules=(
     https://github.com/jnwhiteh/vim-golang.git
     https://github.com/Lokaltog/vim-distinguished
     https://github.com/bronson/vim-trailing-whitespace.git
+    https://github.com/godlygeek/tabular.git
+    https://github.com/rodjek/vim-puppet.git
 )
 
 for module in ${modules[@]}; do
