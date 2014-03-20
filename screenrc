@@ -1,14 +1,12 @@
-vbell off
-caption always "%?%{ Wk}%-Lw%?%{Rk}%n*%f %t%?(%u)%?%?%{Wk}%+Lw%? %{Rk}%=%c %{rk}%d/%M/%Y"
-hardstatus string "%{+b Rk}(%{-b g}$LOGNAME@%H%{+b R}) (%{-b g}%C %a%{+b R}) %{-b g} %n %t %h"
-attrcolor b ".I"
-shell -bash
-term xterm
-defbce "on"
-shell -bash
-term xterm
-#term    screen-256color
-#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 startup_message off
-defscrollback 10000
-
+encoding UTF-8
+attrcolor b ".I"
+defbce "on"
+vbell off
+startup_message off
+defscrollback 5000
+sorendition dY
+hardstatus alwayslastline
+hardstatus string '%{= dW}%-Lw%{= dY}%50> %n*%f %t%{= dW}%+Lw%< %{= dW}%-=%D %m/%d/%y %C %A %1`%{-}'
+termcap xterm-256color 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+terminfo xterm-256color 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
