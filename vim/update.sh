@@ -29,11 +29,12 @@ modules=(
     https://github.com/altercation/vim-colors-solarized.git
     https://github.com/msanders/snipmate.vim.git
     https://github.com/airblade/vim-gitgutter.git
-    https://github.com/jnwhiteh/vim-golang.git
+#    https://github.com/jnwhiteh/vim-golang.git
     https://github.com/Lokaltog/vim-distinguished
     https://github.com/bronson/vim-trailing-whitespace.git
     https://github.com/godlygeek/tabular.git
     https://github.com/rodjek/vim-puppet.git
+    https://github.com/sickill/vim-monokai.git
 )
 
 for module in ${modules[@]}; do
