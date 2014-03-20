@@ -24,20 +24,14 @@ cmap w!! w !sudo tee >/dev/null %
 
 
 " colorscheme
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
-"colorscheme solarized
-let g:solarized_termcolors=256
 "set t_Co=256
-"set t_AB=^[[48;5;%dm
-"set t_AF=^[[38;5;%dm
-
+colorscheme solarized
+let g:solarized_termcolors=256
+set background=dark
 
 "colorscheme distinguished
 "colorscheme twilight
+"colorscheme monokai
 
 nmap \e :NERDTreeToggle<CR>
 nmap \t :TagbarToggle<CR>
@@ -127,4 +121,11 @@ nmap <C-k> :call RefreshBuffer()<CR>
 "  return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
 "endfunction
 
+let g:syntastic_python_checkers = ['pylint', 'pep8', 'pyflakes']
 
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
