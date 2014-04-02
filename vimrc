@@ -25,13 +25,13 @@ cmap w!! w !sudo tee >/dev/null %
 
 " colorscheme
 "set t_Co=256
-colorscheme solarized
-let g:solarized_termcolors=256
+"colorscheme solarized
+"let g:solarized_termcolors=256
 set background=dark
 
 "colorscheme distinguished
 "colorscheme twilight
-"colorscheme monokai
+colorscheme monokai
 
 nmap \e :NERDTreeToggle<CR>
 nmap \t :TagbarToggle<CR>
@@ -121,7 +121,8 @@ nmap <C-k> :call RefreshBuffer()<CR>
 "  return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
 "endfunction
 
-let g:syntastic_python_checkers = ['pylint', 'pep8', 'pyflakes']
+"let g:syntastic_python_checkers = ['pylint', 'pep8', 'pyflakes']
+let g:syntastic_python_checkers = ['flake8']
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
