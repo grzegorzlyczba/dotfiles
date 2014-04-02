@@ -19,5 +19,8 @@ complete -o default -W "${SSH_COMPLETE[*]}" ssh
 
 
 alias vim='vim -p'
+alias sl=ls
 
 export TERM="xterm-256color"
+export PYTHONPATH=.:./lib
+. /etc/bash_completion
