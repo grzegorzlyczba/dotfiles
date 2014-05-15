@@ -23,4 +23,6 @@ alias sl=ls
 
 export TERM="xterm-256color"
 export PYTHONPATH=.:./lib
-. /etc/bash_completion
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
