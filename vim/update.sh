@@ -13,7 +13,7 @@ if [ ! -d bundle ]; then
     mkdir bundle
 fi
 
-curl -Sso autoload/pathogen.vim \
+wget --no-check-certificate -O  autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 modules=(
