@@ -41,7 +41,7 @@ map <C-p> :bprev<CR>
 nmap <C-c> :nohlsearch<CR>
 
 "close current buffer
-map \c :BW<CR>
+map \c :Bdelete<CR>
 
 "quit
 map \z :qa!<CR>

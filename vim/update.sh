@@ -35,6 +35,7 @@ modules=(
     https://github.com/godlygeek/tabular.git
     https://github.com/rodjek/vim-puppet.git
     https://github.com/sickill/vim-monokai.git
+    https://github.com/moll/vim-bbye.git
 #    https://github.com/klen/python-mode.git
 )
 
