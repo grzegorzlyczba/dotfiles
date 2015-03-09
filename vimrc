@@ -1,4 +1,5 @@
 call pathogen#infect()
+filetype plugin on
 set autoindent
 set autoread
 set backspace=indent,eol,start
