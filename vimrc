@@ -24,6 +24,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'sickill/vim-monokai'
 Plugin 'moll/vim-bbye'
 Plugin 'chrisbra/csv.vim'
+Plugin 'fatih/vim-go'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
