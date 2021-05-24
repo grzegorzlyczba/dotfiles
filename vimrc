@@ -26,6 +26,9 @@ Plugin 'moll/vim-bbye'
 Plugin 'chrisbra/csv.vim'
 Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'editorconfig/editorconfig-vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -49,6 +52,8 @@ let g:syntastic_auto_jump=0
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_python_checkers = ['flake8']
 
+" nerdtree
+let NERDTreeShowHidden=1
 
 nmap \e :NERDTreeToggle<CR>
 nmap \t :TagbarToggle<CR>
@@ -68,3 +73,8 @@ set backspace=indent,eol,start
 set fileformats=unix,dos,mac
 set number
 set encoding=utf-8
+set ts=4 sw=4
+
+" tidy commaonds
+command Thtml :%!tidy -q -i --show-errors 0
+command Txml  :%!tidy -q -i --show-errors 0 -xml

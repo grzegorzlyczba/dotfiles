@@ -1,6 +1,6 @@
 [ui]
 merge = vimdiff
-username = Grzegorz Lyczba <glyczba@grupaonet.pl>
+username = Grzegorz Lyczba <grzegorz.lyczba@gmail.com>
 
 [merge-tools]
 vimdiff.executable = vim
