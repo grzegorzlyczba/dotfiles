@@ -28,6 +28,9 @@ Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'gurpreetatwal/vim-avro'
+Plugin 'kyazdani42/nvim-web-devicons' " for file icons
+Plugin 'kyazdani42/nvim-tree.lua'
 
 
 " All of your Plugins must be added before the following line
