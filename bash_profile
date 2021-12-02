@@ -27,7 +27,7 @@ fi
 
 
 function _update_ps1() {
-    PS1="$(/usr/local/bin/powerline-go -modules time,perms,kube,cwd,git,jobs,exit,root -cwd-mode dironly -shorten-gke-names -error $?)"
+    PS1="$(/usr/local/bin/powerline-go -modules time,perms,kube,cwd,git,jobs,exit,root -cwd-mode dironly -shorten-gke-names -error $? -newline)"
 }
 
 if [ "$TERM" != "linux" ] && [ -f "/usr/local/bin/powerline-go" ]; then
@@ -53,10 +53,12 @@ export CLOUDSDK_PYTHON=python2
 . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
 
 ## perl modules
-eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
+# eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
 
 ## openssl via homebrew workaround
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+
